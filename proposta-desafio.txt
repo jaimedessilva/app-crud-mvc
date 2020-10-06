@@ -1,0 +1,23 @@
+﻿Sistema Crud MVC
+
+Tecnologias: Html, Css, Js, PHP, Mysql, PostgrSQL
+
+Proposta:
+Sistema de Cadastro de funcionários:
+Dados:
+Id , Nome, E-mail, Telefone, Imagem.
+
+Tabelas:
+Tb_funcionário
+Tb_telefones
+
+Regras:
+Sistema deve conter uma tabela relacional para o cadastro de mais de um telefone.
+Sistema versionado no Github e Publicado no Heroku.
+
+Pastas:
+
+Templates
+Model
+View
+Controller
