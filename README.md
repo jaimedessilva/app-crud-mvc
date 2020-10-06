@@ -1,14 +1,3 @@
-<html lang="pt-br">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>README</title>
-
-</head>
-
-<body>
     <h1><a href="#">Sistema Crud MVC</a></h1>
 
     <a href="#">Link Sistema</a>
@@ -36,7 +25,7 @@
 
     <h2>Regras:</h2>
     <p>Sistema deve conter uma tabela relacional para o cadastro de mais de um telefone.<br>
-        Sistema versionado no Github e Publicado no Heroku.</p>
+     Sistema versionado no Github.</p>
 
     <h2>Pastas:</h2>
 
@@ -50,6 +39,3 @@
     <h4>Data: 11/10/2020</h4>
 
     <h4>Desenvolvido por S S Jaime</h4>
-</body>
-
-</html>
