@@ -3,7 +3,7 @@
 
     
 
-<h2>Tecnologias: Html, Css, Js, PHP, Mysql, PostgrSQL</h2>
+<h2>Tecnologias: Html, Css, Js, PHP, Mysql/PostgrSQL</h2>
 
 <h2>Proposta:</h2>
 <h3>Sistema de Cadastro de funcionários</h3>
@@ -19,8 +19,8 @@
 
 <h2>Tabelas:</h2>
 <ul>
-<li>Tb_funcionário</li>
-<li>Tb_telefones</li>
+<li>tb_funcionário</li>
+<li>tb_telefones</li>
 </ul>
 
 <h2>Regras:</h2>
@@ -35,7 +35,5 @@ Sistema versionado no Github.</p>
 <li>View</li>
 <li>Controller</li>
 </ul>
-
-<h4>Data: 11/10/2020</h4>
 
 <h4>Desenvolvido por S S Jaime</h4>

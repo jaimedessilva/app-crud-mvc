@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -42,16 +42,8 @@
 
             <h2>Regras:</h2>
             <p>Sistema deve conter uma tabela relacional para o cadastro de mais de um telefone.<br>
-                Sistema versionado no Github.</p>
+            Sistema versionado no Github.</p>
 
-            <h2>Pastas:</h2>
-
-            <ul>
-                <li>Templates</li>
-                <li>Model</li>
-                <li>View</li>
-                <li>Controller</li>
-            </ul>
 
             <h4>Data: 11/10/2020</h4>
 
