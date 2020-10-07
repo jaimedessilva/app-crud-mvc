@@ -22,19 +22,7 @@
                          <br> 
                          <iput type="button class"  class="btn btn-success" style="float: right;">
                          <a href="form-cad-func.php" style="text-decoration: none; color: white;">+Novo</a>
-                       <!-- <div class="search-box">
-								<form action="#" action="#" method="post">
-								<div class="input-group">
-								<input type="text" name="nome" class="form-control" placeholder="Pesquisar por Nome">
-                                <span class="input-group-addon">
-                                <button type="submit" style="background: white; border: none" ><i class="fa fa-search"></i></button>
-                                </span>
-								</div>			
-								</form>									
-                        </div>-->
 						<br>
-
-						
                     </div>
                 
                 <table class="table table-striped"> 

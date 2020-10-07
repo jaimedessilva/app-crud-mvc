@@ -19,7 +19,7 @@
 
 <h2>Tabelas:</h2>
 <ul>
-<li>tb_funcionário</li>
+<li>tb_funcionario</li>
 <li>tb_telefones</li>
 </ul>
 
