@@ -8,6 +8,7 @@
 <body>
    <!-- Admin Painel Include  -->
    <?php include 'header.html'; ?>
+   <?php include 'model/dao.php';?>
     <div id="page-wrapper">
  		<div class="container-fluid" >
  					<!-- Content -->
@@ -34,26 +35,22 @@
                             <th>Telefone</th>
 <!--                             <th>CPF</th> -->
                             <th>Editar</th>
-                            
+                            <th>Excluir</th>  
                         </tr>
                     </thead>
                     <tbody>
-                        <tr th:each="prop : ${proprietarios}">
-                            <td th:text="${prop.id}"></td>
-                            <td></td>
-                            <td th:text="${prop.nome}"></td>
-                            <td th:text="${prop.email}"></td>
-                            <td th:text="${prop.telefone}"></td>
-                            
-<!--                             <td th:text="${prop.cpf}"></td> -->
-
-                            <td><a href="#" class="edit" title="Edit" data-toggle="tooltip">
-                            <i style="font-size:24px" class="fa">&#xf044;</i></a></td>
+                   
+                    <tr>
+                    <?php $lista = Dao::list();?>
+                           <!--  <td><a href="#" class="edit" title="Edit" data-toggle="tooltip">
+                            <i style="font-size:24px" class="fa">&#xf044;</i></a></td> -->
 <!--                              <td><a href="#" class="delete" title="Delete" data-toggle="tooltip"> -->
 <!--                                 <i style="font-size:24px" class="glyphicon">&#xe020;</i></a></td> -->
                         </tr>
                     </tbody>
                 </table>
+                
+               
                 <!-- Paginação -->
                 <div class="clearfix">
                     <div class="hint-text">

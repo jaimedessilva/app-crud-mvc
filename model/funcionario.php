@@ -2,7 +2,7 @@
 /**
  * @ Author: Jaime Dev
  * @ Create Time: 07-10-2020
- * @ Modified time: 07-10-20 / 04:30:28
+ * @ Modified time: 07-10-20 / 15:45:24
  * @ Description:
  */
 
@@ -15,14 +15,13 @@
     private $url;
     
     public function __construct(){
-        $this->id = 1;
-        $this->nome = null;
+        $this->id = 0;
+        $this->nome = 'Guest';
         $this->Email = null;
         $this->telefone = null;
         $this->url = null;
     }
-    public function setAll ($id,$nome, $email, $telefone,$url){
-        $this->id = $id;
+    public function setAll ($nome, $email, $telefone,$url){
         $this->nome = $nome;
         $this->email = $email;
         $this->telefone = $telefone;
@@ -81,7 +80,7 @@
             ."\n".
             "Telefone:".$this->telefone
             ."\n".
-            "Image:".$this->url; 
+            "Image:".$this->url."\n"; 
     }
  } 
 ?>

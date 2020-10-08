@@ -27,15 +27,12 @@
 					Cadastrar <b>Funcionário</b>
 				</h2>
 
-				<form action="controller/funcionario-controller.php" method="post">
+				<form action="controller/funcionario-controller.php" method="post" enctype="multipart/form-data">
 					<input type="hidden" name="Id" Placeholder="Codigo" readonly>
-					<input type="file" name="url"  accept="image/png, image/jpeg" style="margin: 0; width: 20%;"/>
-					<input type="text" name="nome" placeholder="Nome Completo" required="required" maxlength="35"> 
-					<input type="email" name="email" placeholder="Email" required="required" maxlength="50"> 
-<!-- 					<input type="text" name="telefone" placeholder="Telefone" required="required" maxlength="17"> -->
-					<input type="text" name="telefone" class="telefone" placeholder="DDD-Telefone" />
-									
-					<input type="hidden" name="cpf" value="" placeholder="CPF" maxlength="11"> 
+					<input type="file" name="url" style="margin: 0; width: 20%;"> 
+					<input type="text" name="nome" required="required" placeholder="Nome Completo" maxlength="35"> 
+					<input type="email" name="email" required="required" placeholder="Email" maxlength="50"> 
+					<input type="text" name="telefone" required="required" class="telefone" placeholder="DDD-Telefone" /> 
 					<br>
 					<button type="Submit" class="btn btn-success" name="cadastrar">Cadastrar</button>
 				</form>
