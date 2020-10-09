@@ -30,10 +30,10 @@ Sistema versionado no Github.</p>
 <h2>Pastas:</h2>
 
 <ul>
-<li>Templates</li>
 <li>Model</li>
 <li>View</li>
 <li>Controller</li>
+<li>db</li>
 </ul>
 
 <h4>Desenvolvido por S S Jaime</h4>
