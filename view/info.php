@@ -16,8 +16,8 @@
             <!-- Content -->
 
             <h4>
-				Bem Vindo!!!
-			</h4>
+                Bem Vindo!!!
+            </h4>
 
             <h1><a href="#">Sistema Web MVC</a></h1>
 
@@ -46,7 +46,7 @@
 
             <h2>Regras:</h2>
             <p>Sistema deve conter uma tabela relacional para o cadastro de mais de um telefone.<br>
-            Sistema versionado no Github.</p>
+                Sistema versionado no Github.</p>
 
 
             <h4>Data: 11/10/2020</h4>

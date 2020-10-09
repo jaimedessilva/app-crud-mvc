@@ -26,7 +26,7 @@
 				<h2>
 					Atualizar <b>Funcionário</b>
 				</h2>
-				<form action="controller/funcionario-controller.php" method="post" enctype="multipart/form-data">
+				<form action="../controller/request.php" method="post" enctype="multipart/form-data">
 					<input type="text"class="readonly" name="id" value="<?php echo $_GET['id'];?> " Placeholder="Codigo" readonly>
 					<input type="file" name="url" value="<?php echo "repositorio/".$_GET['url'];?>" style="margin: 0; width: 20%;"> 
 					<input type="text" name="nome" value="<?php echo $_GET['nome'];?>" required="required" > 

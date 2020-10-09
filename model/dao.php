@@ -43,7 +43,7 @@ include 'mysqli.php';
                             ."&telefone=".$linha['telefone']."'>
             <i style='font-size:24px' class='fa fa-phone' aria-hidden='true'></i>
             </a></td>";
-            echo "<td><a href='controller/excluir-controller.php?id=".$linha['id']."'>
+            echo "<td><a href='../controller/request.php?id=".$linha['id']."'>
             <i style='font-size:24px' class='glyphicon'>&#xe020;</i>
             </a></td></tr>"; 
                
