@@ -3,8 +3,8 @@
 /**
  * @ Author: Jaime Dev
  * @ Create Time: 08-10-2020
- * @ Modified time: 08-10-20 / 03:07:51
- * @ Description:
+ * @ Modified time: 08-10-20 / 19:47:56
+ * @ Description: Conexão MySQLi
  */
 
 class DB {

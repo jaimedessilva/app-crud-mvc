@@ -24,17 +24,16 @@
 
 			<div class="form-container">
 				<h2>
-					Cadastrar <b>Funcionário</b>
+					Adicionar <b>Telefone</b>
 				</h2>
-
 				<form action="controller/funcionario-controller.php" method="post" enctype="multipart/form-data">
-					<input type="hidden" name="Id" Placeholder="Codigo" readonly>
-					<input type="file" name="url" style="margin: 0; width:50%;"> 
-					<input type="text" name="nome" required="required" placeholder="Nome Completo" maxlength="35"> 
-					<input type="email" name="email" required="required" placeholder="Email" maxlength="50"> 
-					<input type="text" name="telefone" required="required" class="telefone" placeholder="DDD-Telefone" /> 
-					<br>
-					<button type="Submit" class="btn btn-success" name="cadastrar">Cadastrar</button>
+					<input type="text" class="readonly" name="id" value="<?php echo $_GET['id'];?> " Placeholder="Codigo" readonly>
+					<input type="text" class="readonly" name="nome" value="<?php echo $_GET['nome'];?>" readonly >  
+					<input type="text" class="readonly" name="telefone" value="<?php echo $_GET['telefone'];?>" class="telefone" readonly /> 
+					<input type="text" name="novo" required="required" class="telefone" placeholder="DDD+Novo Numero" />
+				
+                    <br>
+                    <button type="Submit" class="btn btn-success" name="adicionar">Adicionar</button>
 				</form>
 			</div>
 			<!-- End Content -->

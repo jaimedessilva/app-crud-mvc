@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home -|- Funcionários</title>
+    <title>Home|Funcionários</title>
 </head>
 <body>
    <!-- Admin Painel Include  -->
@@ -29,12 +29,14 @@
                 <table class="table table-striped"> 
                         <tr>
                             <th>Id</th>
-                            <th>img</th>
+                            <th>Thumb</th>
                             <th>Nome</th>
                             <th>Email</th>
                             <th>Telefone</th>
+                            <th>Telefone+</th>
 <!--                             <th>CPF</th> -->
                             <th>Editar</th>
+                            <th>Add<br>+Telefone</th>
                             <th>Excluir</th>  
                         </tr>
                     </thead>

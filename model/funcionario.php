@@ -2,8 +2,8 @@
 /**
  * @ Author: Jaime Dev
  * @ Create Time: 07-10-2020
- * @ Modified time: 07-10-20 / 15:45:24
- * @ Description:
+ * @ Modified time: 08-10-20 / 19:51:02
+ * @ Description: Classe modelo Funcionario
  */
 
  Class Funcionario {
@@ -21,21 +21,27 @@
         $this->telefone = null;
         $this->url = null;
     }
+    /**
+     *  Setter todos os Dados s/ id
+     */
     public function setAll ($nome, $email, $telefone,$url){
         $this->nome = $nome;
         $this->email = $email;
         $this->telefone = $telefone;
         $this->url = $url;
     }
-    public function getAll (){
-        return $this->id. 
-                $this->nome. 
-                $this->email. 
-                $this->telefone. 
-                $this->url;
+    /**
+     *  Setter todos os dados + id
+     */
+    public function setCampos ($nome, $email, $telefone,$url,$id){
+        $this->id = $id;
+        $this->nome = $nome;
+        $this->email = $email;
+        $this->telefone = $telefone;
+        $this->url = $url;
     }
     /**
-     * Setter
+     * Setter / Setter 
      */
 	public function setId($string){
         $this->id = $string;
@@ -52,9 +58,6 @@
     public function setImg($string){
         $this->url = $string;
     }
-    /**
-     * Getter
-     */
     public function getId (){
         return $this->id;
     }
@@ -70,6 +73,9 @@
     public function getImg (){
         return $this->url;
     }
+    /**
+     *  Metodo que imprime o Objeto/toString
+     */
 	public function getObject(){
         
         echo "Cod:".$this->id
@@ -80,7 +86,7 @@
             ."\n".
             "Telefone:".$this->telefone
             ."\n".
-            "Image:".$this->url."\n"; 
+            "Image:".implode("",$this->url)."\n"; 
     }
  } 
 ?>

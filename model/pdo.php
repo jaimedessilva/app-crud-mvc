@@ -3,8 +3,9 @@
 /**
  * @ Author: Jaime Dev
  * @ Create Time: 06-10-2020
- * @ Modified time: 08-10-20 / 04:54:01
- * @ Description:
+ * @ Modified time: 08-10-20 / 19:48:47
+ * @ Description: Conexao PDO 
+ * possibilitando portabilidade posterior p outro DataBase
  */
 
  class Conexao {

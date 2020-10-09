@@ -15,12 +15,16 @@
         <div class="container-fluid">
             <!-- Content -->
 
-            <h1><a href="#">Sistema Crud MVC</a></h1>
+            <h4>
+				Bem Vindo!!!
+			</h4>
+
+            <h1><a href="#">Sistema Web MVC</a></h1>
 
             <a href="#">Link Sistema</a>
 
 
-            <h2>Tecnologias: Html, Css, Js, PHP, Mysql, PostgrSQL</h2>
+            <h2>Tecnologias: Html, Css, Bootstrap, Js, JQuery, PHP, Mysql</h2>
 
             <h2>Proposta:</h2>
             <h3>Sistema de Cadastro de funcionários</h3>
@@ -31,7 +35,7 @@
                 <li>Nome</li>
                 <li>Email</li>
                 <li>Telefone</li>
-                <li>Imagem</li>
+                <li>Thumbnail</li>
             </ul>
 
             <h2>Tabelas:</h2>

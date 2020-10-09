@@ -27,14 +27,15 @@
 					Atualizar <b>Funcionário</b>
 				</h2>
 				<form action="controller/funcionario-controller.php" method="post" enctype="multipart/form-data">
-					<input type="text" name="Id" value="<?php echo $_GET['id'];?> " Placeholder="Codigo" readonly>
-					<input type="file" name="url" value="<?php echo $_GET['url'];?>" style="margin: 0; width: 20%;"> 
+					<input type="text"class="readonly" name="id" value="<?php echo $_GET['id'];?> " Placeholder="Codigo" readonly>
+					<input type="file" name="url" value="<?php echo "repositorio/".$_GET['url'];?>" style="margin: 0; width: 20%;"> 
 					<input type="text" name="nome" value="<?php echo $_GET['nome'];?>" required="required" > 
 					<input type="email" name="email" value="<?php echo $_GET['email'];?>"required="required" placeholder="Email" maxlength="50"> 
 					<input type="text" name="telefone" value="<?php echo $_GET['telefone'];?>" required="required" class="telefone" placeholder="DDD-Telefone" /> 
 					<br>
-                    <button type="Submit" class="btn btn-success" name="salvar">Salvar</button>
-                    <input href="#" type="button" class="btn btn-primary" name="cadastrar" value="+Telefone">
+					<button type="Submit" class="btn btn-success" name="salvar">Salvar</button>
+					<!-- <input type="button" class="btn primary">
+					<a href="form-phone.php" style="text-decoration: none; color: white;">+Novo</a> -->
 				</form>
 			</div>
 			<!-- End Content -->
