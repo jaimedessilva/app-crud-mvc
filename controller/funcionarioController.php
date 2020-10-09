@@ -8,8 +8,8 @@ require_once ("resize-class.php");
  * @ Author: Jaime Dev
  * @ Create Time: 09-10-2020
  * @ Modified time: 09-10-20 / 05:32:47
- * @ Description:
- */
+ * @ Description:**/
+ 
  class FuncionarioController {
     
     /**
@@ -100,7 +100,7 @@ require_once ("resize-class.php");
         $id = $_GET['id'];
         $dao = new Dao ();
         $dao->remove($id);
-        echo "<a href='../index.php'>Voltar</a>";
+        echo "<a href='../view/index.php'>Voltar</a><br>";
     
     }
     /**
@@ -108,11 +108,11 @@ require_once ("resize-class.php");
      */
     public function addTel(){
       
-      $id   = $_POST['id'];
-      $telefone1  = $_POST['novo'];
+        $id   = $_POST['id'];
+        $telefone1  = $_POST['novo'];
 
-      $dao = new Dao();
-      $dao->addTelefone($id, $telefone1);
+        $dao = new Dao();
+        $dao->addTelefone($id, $telefone1);
 
     }
  }

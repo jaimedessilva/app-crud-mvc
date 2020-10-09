@@ -1,12 +1,12 @@
 <?php
 
 include 'funcionarioController.php';
+include 'logarController.php';
 /**
  * @ Author: Jaime Dev
  * @ Create Time: 09-10-2020
  * @ Modified time: 09-10-20 / 06:43:02
- * @ Description: Fluxo de Requisição de Formulario
- */
+ * @ Description: Fluxo de Requisição de Formulario **/
 
 if (isset($_POST['cadastrar'])) {
     
@@ -30,9 +30,14 @@ if (isset($_GET['id'])){
     $controller = new FuncionarioController();
     $controller->remover ();
 }
+if (isset($_POST['logar'])){
+    
+    $logar = new Logar();
+    $logar->autenticar();  
+}
 
 else {
-    echo "Nenhuma ação executada";
+    echo "......";
 }
 
 

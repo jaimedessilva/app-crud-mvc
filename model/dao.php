@@ -68,7 +68,7 @@ include 'mysqli.php';
             $st->bindValue(4,$obj->getImg());                     
             if ($st->execute ()){
                 echo "Funcionario Cadastrado com Sucesso!";
-                header("Location: ../index.php");
+                header("Location: ../view/index.php");
             }else {
                 echo "Ops... parece que não deu bom...";
                 }   
@@ -100,7 +100,7 @@ include 'mysqli.php';
             if ($st->execute ()){
                 
                 echo "Atalizado com sucesso";
-                header("Location: ../index.php");
+                header("Location: ../view/index.php");
             }else {
                 echo "Ops... parece que não deu bom...";
                 }       
@@ -125,7 +125,7 @@ include 'mysqli.php';
             
              if ($st->execute ()){
                 echo "Telefone adicionado com sucesso";
-                header("Location: ../index.php");
+                header("Location: ../view/index.php");
             }else {
                 echo "Ops... parece que não deu bom...";
                 }       
