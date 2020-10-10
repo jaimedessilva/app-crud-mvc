@@ -1,5 +1,6 @@
 <?php
 
+include 'config.php';
 /**
  * @ Author: Jaime Dev
  * @ Create Time: 06-10-2020
@@ -15,11 +16,15 @@
     private function __construct() {
         //
     }
+    /**
+     *  Conexão PDO
+     */
     public static function pdo() {
         
         if (!isset(self::$instance)) {
+            self::$instance = null;
             try{
-                self::$instance = new PDO('mysql:host=localhost; dbname=db_app', 'root', '');
+                self::$instance = new PDO("mysql:host=".HOST."; dbname=".DB, USER, PASS);
                 self::$instance->setAttribute(PDO::ATTR_ERRMODE,
                 PDO::ERRMODE_EXCEPTION);
                 self::$instance->setAttribute(PDO::ATTR_ORACLE_NULLS,
@@ -31,8 +36,28 @@
         }
         return self::$instance;
     }
-
+    public static function close(){
+        self::$instance=null;  
+    }
+    /**
+     * Conexao MySQLi
+     */
+    public static function connect() {
+        
+        $mysqli = new mysqli(HOST,USER,PASS,DB);
+    
+        if ($mysqli->connect_errno){      
+            echo "Ocorreu um erro na conexão com o banco de dados.";
+        exit;
+        }else {
+            echo "...";
+            return $mysqli; 
+            }      
+        }
 }
 //Testa
-//$pdo = Conexao::pdo();
+/* $conn = Conexao::connect();
+$pdo = Conexao::pdo();
+ */
+
 ?>

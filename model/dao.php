@@ -1,7 +1,6 @@
 <?php 
 
-include 'pdo.php';
-include 'mysqli.php';
+include '../db/pdo.php';
 
 /**
  * @ Author: Jaime Dev
@@ -17,7 +16,7 @@ include 'mysqli.php';
      */
     public static function list (){
         //List
-        $conn = DB::connect();
+        $conn = Conexao::connect();
         $query = "SELECT id,url_img,nome,email,telefone,b.numero  FROM tb_funcionario a 
         LEFT JOIN tb_telefones b on a.id = b.id_funcionario GROUP BY id order by id LIMIT 50";
         
@@ -73,10 +72,10 @@ include 'mysqli.php';
                 echo "Ops... parece que não deu bom...";
                 }   
             
-
         }catch (Exception $e){
             echo "Ops... Não foi possível Salvar dados";
-        }     
+        }
+        Conexao::close();     
     }
     /**
      *  Atulizar Dados Funcionario
@@ -107,7 +106,8 @@ include 'mysqli.php';
 
         } catch (Exception $e){
              echo "Ops... Não foi possível Salvar dados";
-            }     
+            } 
+            echo Conexao::close();     
     }
     /**
      *  Adiciona Telefone
@@ -128,7 +128,8 @@ include 'mysqli.php';
                 header("Location: ../view/index.php");
             }else {
                 echo "Ops... parece que não deu bom...";
-                }       
+                } 
+                Conexao::close();       
     } 
     /**
      *  Metodo Excluir Funcionario
@@ -144,6 +145,7 @@ include 'mysqli.php';
         }else {
             echo "Ops... parece que não deu bom...";
             }
+            Conexao::close(); 
       }
  }//End Class
  
