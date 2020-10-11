@@ -57,10 +57,34 @@ require_once ("resize-class.php");
      
     }
     /**
-     *  Alterar
+     *  Alterar sem Foto
      */
     public function alterar(){
       
+        $func = new Funcionario();
+        $dao = new Dao ();
+        
+        //Post
+        $id = $_POST['id'];
+        $nome   = $_POST['nome'];
+        $email = $_POST['email'];
+        $telefone  = $_POST['telefone'];
+        
+        //Dados
+        $func->setId($id);
+        $func->setNome($nome);
+        $func->setEmail($email);
+        $func->setTelefone($telefone);
+
+        //Update DB
+        $dao->update($func);
+        
+    }
+    /**
+     * Alterar dados com foto
+     */
+    public function alterarDados (){
+        
         $func = new Funcionario();
         $dao = new Dao ();
         
@@ -83,14 +107,13 @@ require_once ("resize-class.php");
       
         //Resize Imagem
         $resize = new resize($url_img);
-        $resize->resizeImage(350,200, 'auto');
+        $resize->resizeImage(400,300, 'auto');
         $resize->saveImage($url_img,100);
     
         //Set Campos
         $func->setCampos($nome,$email,$telefone,$novo_nome,$id);
         //Update DB
-        $dao->update($func);
-        
+        $dao->updateFoto($func);
     }
     /**
      *  Excluir
@@ -98,9 +121,10 @@ require_once ("resize-class.php");
     public function remover (){
       
         $id = $_GET['id'];
+        
         $dao = new Dao ();
         $dao->remove($id);
-        echo "<a href='../view/index.php'>Voltar</a><br>";
+        echo "<h2><a href='../view/index.php'>Voltar</a></h2><br>";
     
     }
     /**

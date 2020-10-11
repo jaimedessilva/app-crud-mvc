@@ -9,7 +9,6 @@
 
 <body>
     <!-- Admin Painel Include  -->
-    <div></div>
     <?php include 'header.html';?>
     <div id="page-wrapper">
         <div class="container-fluid">

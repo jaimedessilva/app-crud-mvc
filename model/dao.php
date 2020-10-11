@@ -48,7 +48,7 @@ include '../db/pdo.php';
                             ."&telefone=".$linha['telefone']."'>
             <i style='font-size:24px' class='fa fa-phone' aria-hidden='true'></i>
             </a></td>";
-            echo "<td><a href='../controller/request.php?id=".$linha['id']."'>
+            echo "<td><a href='confirm-del.php?id=".$linha['id']."&&nome=".$linha['nome']."'>
             <i style='font-size:24px' class='glyphicon'>&#xe020;</i>
             </a></td></tr>"; 
                
@@ -90,18 +90,17 @@ include '../db/pdo.php';
        //atualizar
        $pdo = Conexao::pdo();
        try {
+           
             $query = "UPDATE ". self::$funcionario." 
                             SET nome = ?, 
                             email = ?, 
-                            telefone = ?, 
-                            url_img = ?
+                            telefone = ? 
                             WHERE id = ?";
             $st = $pdo->prepare($query);
             $st->bindValue(1,$obj->getNome());
             $st->bindValue(2,$obj->getEmail());
             $st->bindValue(3,$obj->getTelefone());
-            $st->bindValue(4,$obj->getImg());
-            $st->bindValue(5,$obj->getId());
+            $st->bindValue(4,$obj->getId());
             if ($st->execute ()){
                 
                 echo "Atalizado com sucesso";
@@ -115,6 +114,39 @@ include '../db/pdo.php';
             } 
             echo Conexao::close();     
     }
+    /**
+     * Atualizar dados com Foto
+     */
+    public function updateFoto(Funcionario $obj){
+        //atualizar
+        $pdo = Conexao::pdo();
+        try {
+            
+             $query = "UPDATE ". self::$funcionario." 
+                             SET nome = ?, 
+                             email = ?, 
+                             telefone = ?,
+                             url_img = ? 
+                             WHERE id = ?";
+             $st = $pdo->prepare($query);
+             $st->bindValue(1,$obj->getNome());
+             $st->bindValue(2,$obj->getEmail());
+             $st->bindValue(3,$obj->getTelefone());
+             $st->bindValue(4,$obj->getImg());
+             $st->bindValue(5,$obj->getId());
+             if ($st->execute ()){
+                 
+                 echo "Atalizado com sucesso";
+                 header("Location: ../view/index.php");
+             }else {
+                 echo "Ops... parece que não deu bom...";
+                 }       
+ 
+         } catch (Exception $e){
+              echo "Ops... Não foi possível Salvar dados";
+             } 
+             echo Conexao::close();     
+     }
     /**
      *  Adiciona Telefone
      */
@@ -147,7 +179,7 @@ include '../db/pdo.php';
         $st = $pdo->prepare($query);
         $st->bindValue(1,$id);
         if ($st->execute ()){
-            echo "Funcionario Excluido com sucesso";
+            echo "<h2>Funcionario Excluido com sucesso!</h2>";
         }else {
             echo "Ops... parece que não deu bom...";
             }

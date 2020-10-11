@@ -38,6 +38,7 @@
                         placeholder="DDD-Telefone" />
                     <br>
                     <button type="Submit" class="btn btn-success" name="cadastrar">Cadastrar</button>
+                    <a class="btn btn-primary" href="index.php" >Voltar</a>
                 </form>
             </div>
             <!-- End Content -->

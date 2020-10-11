@@ -2,7 +2,7 @@
 /**
  * @ Author: Jaime Dev
  * @ Create Time: 07-10-2020
- * @ Modified time: 08-10-20 / 19:51:02
+ * @ Modified time: 11-10-20 / 00:36:40
  * @ Description: Classe modelo Funcionario
  */
 
@@ -86,7 +86,7 @@
             ."\n".
             "Telefone:".$this->telefone
             ."\n".
-            "Image:".implode("",$this->url)."\n"; 
+            "Image:"./* implode("",$this->url). */"\n"; 
     }
  } 
 ?>

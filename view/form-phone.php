@@ -38,6 +38,7 @@
 
                     <br>
                     <button type="Submit" class="btn btn-success" name="adicionar">Adicionar</button>
+                    <a class="btn btn-primary" href="index.php" >Voltar</a>
                 </form>
             </div>
             <!-- End Content -->
