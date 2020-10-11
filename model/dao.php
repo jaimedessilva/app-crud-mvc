@@ -9,15 +9,21 @@ include '../db/pdo.php';
  * @ Description: Classe de Acesso a Dados DAO
  * e executa as operações de CRUD
  */
+ 
  class Dao {
 
+    /**
+     * Tabelas Banco de Dados
+     */
+    public static $funcionario ="tb_funcionario";
+    public static $telefones ="tb_telefones";
     /**
      *  Listar Funcionarios
      */
     public static function list (){
         //List
         $conn = Conexao::connect();
-        $query = "SELECT id,url_img,nome,email,telefone,b.numero  FROM tb_funcionario a 
+        $query = "SELECT id,url_img,nome,email,telefone,b.numero  FROM ". self::$funcionario." a 
         LEFT JOIN tb_telefones b on a.id = b.id_funcionario GROUP BY id order by id LIMIT 50";
         
         $rs = $conn->query($query);
@@ -56,7 +62,7 @@ include '../db/pdo.php';
         $pdo = Conexao::pdo();
 
         try {
-            $query = "INSERT INTO tb_funcionario
+            $query = "INSERT INTO ". self::$funcionario."
             (nome,email,telefone,url_img) 
             VALUES (?,?,?,?)";
 
@@ -84,7 +90,7 @@ include '../db/pdo.php';
        //atualizar
        $pdo = Conexao::pdo();
        try {
-            $query = "UPDATE tb_funcionario 
+            $query = "UPDATE ". self::$funcionario." 
                             SET nome = ?, 
                             email = ?, 
                             telefone = ?, 
@@ -116,7 +122,7 @@ include '../db/pdo.php';
         //Adicionar Telefone
          $pdo = Conexao::pdo();
             
-             $query = "INSERT INTO tb_telefones
+             $query = "INSERT INTO ". self::$telefones."
              (id_funcionario,numero) 
              VALUES (?,?)";
              $st = $pdo->prepare($query);
@@ -137,7 +143,7 @@ include '../db/pdo.php';
     public function remove ($id){
         //Remover
         $pdo = Conexao::pdo();
-        $query = "DELETE FROM tb_funcionario WHERE id = ?";
+        $query = "DELETE FROM ". self::$funcionario." WHERE id = ?";
         $st = $pdo->prepare($query);
         $st->bindValue(1,$id);
         if ($st->execute ()){
@@ -148,9 +154,7 @@ include '../db/pdo.php';
             Conexao::close(); 
       }
  }//End Class
- 
- /* $var = new Dao();
- $var->list(); */
+ //$dao = Dao::list();
 
 ?>
 
