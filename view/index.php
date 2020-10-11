@@ -31,16 +31,16 @@
 
             <table class="table table-striped">
                 <tr>
-                    <th>Id</th>
+                    <th style="width: 15px ;">Id</th>
                     <th>Thumb</th>
                     <th>Nome</th>
                     <th>Email</th>
                     <th>Telefone</th>
                     <th>Telefone+</th>
                     <!--                             <th>CPF</th> -->
-                    <th>Editar</th>
-                    <th>Add<br>+Telefone</th>
-                    <th>Excluir</th>
+                    <th style="width: 5%">Editar</th>
+                    <th style="width: 5%">Add<br>+Telefone</th>
+                    <th style="width: 5%">Excluir</th>
                 </tr>
                 </thead>
                 <tbody>

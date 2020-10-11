@@ -41,15 +41,15 @@ include '../db/pdo.php';
                            ."&email=".$linha['email']
                            ."&telefone=".$linha['telefone']."'>
             
-            <i style='font-size:24px' class='fa'>&#xf044;</i>
+            <i style='font-size:24px; color: #49b675' class='fa'>&#xf044;</i>
             </a></td>";
             echo "<td><a href='form-phone.php?id=".$linha['id']
                             ."&nome=".$linha['nome']
                             ."&telefone=".$linha['telefone']."'>
-            <i style='font-size:24px' class='fa fa-phone' aria-hidden='true'></i>
+            <i style='font-size:24px; color: #31639c;' class='fa fa-phone' aria-hidden='true'></i>
             </a></td>";
             echo "<td><a href='confirm-del.php?id=".$linha['id']."&&nome=".$linha['nome']."'>
-            <i style='font-size:24px' class='glyphicon'>&#xe020;</i>
+            <i style='font-size:24px; color: red;' class='glyphicon'>&#xe020;</i>
             </a></td></tr>"; 
                
         }
