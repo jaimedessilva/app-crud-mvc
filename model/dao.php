@@ -24,7 +24,7 @@ include '../db/pdo.php';
         //List
         $conn = Conexao::connect();
         $query = "SELECT id,url_img,nome,email,telefone,b.numero  FROM ". self::$funcionario." a 
-        LEFT JOIN tb_telefones b on a.id = b.id_funcionario GROUP BY id order by id LIMIT 50";
+        LEFT JOIN " . self::$telefones." b on a.id = b.id_funcionario GROUP BY id order by id LIMIT 50";
         
         $rs = $conn->query($query);
         while($linha = $rs->fetch_assoc()){
