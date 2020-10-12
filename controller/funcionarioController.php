@@ -16,9 +16,38 @@ require_once ("resize-class.php");
      *  Listar Funcionario
      */
     public static function listar(){ 
-      
-      $lista = Dao::list();
-    
+      //Recebe Array
+      $dao = Dao::list();
+      //Object recebe array
+      $funcionario = $dao;
+        //Percorre o Array
+        foreach ($funcionario as $f){
+        //Monta a Tabela
+        echo "<td>".$f['id']."</td>";
+        echo "<td>"."<a href="."repositorio/".$f['url_img'].">".
+                    "<img class='avatar' src='./repositorio/"
+                       .$f['url_img']."'>"."</td>";
+            echo "<td>".$f['nome']."</td>";
+            echo "<td>".$f['email']."</td>";
+            echo "<td>".$f['telefone']."</td>";
+            echo "<td>".$f['numero']."</td>";
+            echo "<td><a href='form-edit.php?id=".$f['id']
+                            ."&nome=".$f['nome']
+                            ."&url=repositorio/".$f['url_img']
+                            ."&email=".$f['email']
+                            ."&telefone=".$f['telefone']."'>
+            
+            <i style='font-size:24px; color: #49b675' class='fa'>&#xf044;</i>
+            </a></td>";
+            echo "<td><a href='form-phone.php?id=".$f['id']
+                            ."&nome=".$f['nome']
+                            ."&telefone=".$f['telefone']."'>
+            <i style='font-size:24px; color: #31639c;' class='fa fa-phone' aria-hidden='true'></i>
+            </a></td>";
+            echo "<td><a href='confirm-del.php?id=".$f['id']."&&nome=".$f['nome']."'>
+            <i style='font-size:24px; color: red;' class='glyphicon'>&#xe020;</i>
+            </a></td><tr>";
+        } 
     }
     /**
      *  Criar Funcionario

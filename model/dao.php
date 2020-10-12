@@ -22,37 +22,15 @@ include '../db/pdo.php';
      */
     public static function list (){
         //List
-        $conn = Conexao::connect();
+        $db = Conexao::connect();
         $query = "SELECT id,url_img,nome,email,telefone,b.numero  FROM ". self::$funcionario." a 
         LEFT JOIN " . self::$telefones." b on a.id = b.id_funcionario GROUP BY id order by id LIMIT 50";
-        
-        $rs = $conn->query($query);
-        while($linha = $rs->fetch_assoc()){
-            echo "<td>".$linha['id']."</td>";
-            echo "<td>"."<a href="."repositorio/".$linha['url_img'].">"."<img class='avatar' src='./repositorio/"
-            .$linha['url_img']."'>"."</td>";
-            echo "<td>".$linha['nome']."</td>";
-            echo "<td>".$linha['email']."</td>";
-            echo "<td>".$linha['telefone']."</td>";
-            echo "<td>".$linha['numero']."</td>";
-            echo "<td><a href='form-edit.php?id=".$linha['id']
-                           ."&nome=".$linha['nome']
-                           ."&url=repositorio/".$linha['url_img']
-                           ."&email=".$linha['email']
-                           ."&telefone=".$linha['telefone']."'>
-            
-            <i style='font-size:24px; color: #49b675' class='fa'>&#xf044;</i>
-            </a></td>";
-            echo "<td><a href='form-phone.php?id=".$linha['id']
-                            ."&nome=".$linha['nome']
-                            ."&telefone=".$linha['telefone']."'>
-            <i style='font-size:24px; color: #31639c;' class='fa fa-phone' aria-hidden='true'></i>
-            </a></td>";
-            echo "<td><a href='confirm-del.php?id=".$linha['id']."&&nome=".$linha['nome']."'>
-            <i style='font-size:24px; color: red;' class='glyphicon'>&#xe020;</i>
-            </a></td></tr>"; 
-               
+    
+        $rs = $db->query($query);   
+        while($f = $rs->fetch_array(MYSQLI_ASSOC)){
+            $list[] = $f;
         }
+        return $list;
     }
     /**
      *  Cadastrar Funcionários
