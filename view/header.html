@@ -3,14 +3,19 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>SSJ-Dev-|-Header</title>
-
+	<title>ssJDev-Header</title>
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
-	<style inline="text">
+	<style>
+		
+		/** -----------------------------------------------
+		 *  Inline CSS com Bootstrap
+		 * *-----------------------------------------------*/
+		
 		@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
-
+	
 		/*CSS Menu e Painel Admin*/
 		@media (min-width :768px) {
 			body {
@@ -20,26 +25,26 @@
 				-webkit-font-smoothing: antialiased;
 				text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 			}
-
+	
 			/*html, body, #wrapper, #page-wrapper {height: 100%; overflow: hidden;}*/
 		}
-
+	
 		#wrapper {
 			/*     border:1px solid red; */
 			padding-left: 0;
 			/* 	min-height: 650px; */
 		}
-
+	
 		#page-wrapper {
 			padding: 0;
 		}
-
+	
 		.navbar-collapse {
 			border-top: 1px solid transparent;
 			width: 50%;
 			box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
 		}
-
+	
 		#main {
 			margin-top: 10px;
 			padding: 2px;
@@ -48,7 +53,7 @@
 			margin-left: 225px;
 			border: 1px solid green;
 		}
-
+	
 		.container-fluid {
 			margin-top: 60px;
 			margin-left: 225px;
@@ -56,10 +61,10 @@
 			min-height: 550px;
 			/*  	border: 2px solid black;  */
 		}
-
-		/*
-	MOBILE
-*/
+	
+		/**
+		 * Mobile
+		 * -------------------------------------*/
 		@media (max-width :768px) {
 			body {
 				font-family: Arial, Helvetica, sans-serif;
@@ -67,75 +72,75 @@
 				-webkit-font-smoothing: antialiased;
 				text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 			}
-
+	
 			#wrapper {
 				width: 100%;
 				background: none;
 				margin-left: -225px;
 			}
-
+	
 			#page-wrapper {
 				margin-top: 110px;
 				width: 100%;
 				padding: 22xp 10px;
 				/*          border: 1px solid green;      */
 			}
-
+	
 			.row {
 				/*         border: 1px solid green;  */
 				background: #F2F1F1;
 			}
-
+	
 			.container-fluid {
 				/* width: 100%; */
 				background: #ffffff;
-				     	/* border: 1px solid red;  */
+				/* border: 1px solid red;  */
 				margin-left: 0;
 			}
-
+	
 			.form-container {
 				margin: 5px auto;
 				padding: 5px;
 				/*     	border: 1px solid red; */
 				width: 100%;
 			}
-
+	
 			.form-container input {
 				width: 100%;
 			}
-
+	
 			.footer {
 				display: none;
 			}
 		}
-
+	
 		.col-sm-12 col-md-12 well {
 			height: 50px;
 		}
-
+	
 		/* Top Navigation */
 		.navbar {
-			
+	
 			background-color: #0e081b;
 			opacity: 0.9;
 		}
-
+	
 		.top-nav {
 			padding: 0 15px;
 		}
-
+	
 		.top-nav>li {
 			display: inline-block;
 			float: left;
 		}
-
+	
 		.top-nav>li>a {
 			padding-top: 20px;
 			padding-bottom: 20px;
 			line-height: 20px;
 			color: #fff;
 		}
-
+	
 		.top-nav>li>a:hover,
 		.top-nav>li>a:focus,
 		.top-nav>.open>a,
@@ -144,7 +149,7 @@
 			color: #fff;
 			background-color: #1a242f;
 		}
-
+	
 		.top-nav>.open>.dropdown-menu {
 			float: left;
 			position: absolute;
@@ -156,11 +161,11 @@
 			-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 			box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 		}
-
+	
 		.top-nav>.open>.dropdown-menu>li>a {
 			white-space: normal;
 		}
-
+	
 		/* Side Navigation */
 		@media (min-width :768px) {
 			.side-nav {
@@ -173,30 +178,31 @@
 				border-radius: 0;
 				border-top: 1px rgba(0, 0, 0, .5) solid;
 				overflow-y: auto;
-				background-color: #16082f;
+				/* background-color: #16082f; */
+				background-color: #0e081b;
 				/*background-color: #5A6B7D;*/
 				bottom: 0;
 				overflow-x: hidden;
 				padding-bottom: 40px;
 			}
-
+	
 			.side-nav>li>a {
 				width: 225px;
 				border-bottom: 1px rgba(0, 0, 0, .3) solid;
 			}
-
+	
 			.side-nav li a:hover,
 			.side-nav li a:focus {
 				outline: none;
 				background-color: #1a242f !important;
 			}
 		}
-
+	
 		.side-nav>li>ul {
 			padding: 0;
 			border-bottom: 1px rgba(0, 0, 0, .3) solid;
 		}
-
+	
 		.side-nav>li>ul>li>a {
 			display: block;
 			padding: 10px 15px 10px 38px;
@@ -204,11 +210,11 @@
 			/*color: #999;*/
 			color: #fff;
 		}
-
+	
 		.side-nav>li>ul>li>a:hover {
 			color: #fff;
 		}
-
+	
 		.navbar .nav>li>a>.label {
 			-webkit-border-radius: 50%;
 			-moz-border-radius: 50%;
@@ -224,25 +230,24 @@
 			text-align: center;
 			padding: 2px;
 		}
-
+	
 		.navbar .nav>li>a:hover>.label {
 			top: 10px;
 		}
-
+	
 		.navbar-brand {
 			padding: 5px 15px;
 		}
-
-/* ************************************
-*   Form Container
-*
-**************************************/
+	
+	/**
+	 * Form Container
+	 * ------------------------*/
 		.form-container {
 			background: white;
 			padding: 10px;
 			width: 90%;
 		}
-
+	
 		input {
 			margin: 5px auto;
 			width: 80%;
@@ -252,7 +257,7 @@
 			padding: 20px;
 			font-size: 20px;
 		}
-
+	
 		select {
 			width: 80%;
 			height: 45px;
@@ -263,11 +268,11 @@
 			font-weight: bold;
 			font-size: 20px;
 		}
-
+	
 		.uppercase {
 			text-transform: uppercase;
 		}
-
+	
 		.btn {
 			margin-top: 5px;
 			width: 100px;
@@ -275,7 +280,7 @@
 			padding: 10px;
 			font-weight: bold;
 		}
-
+	
 		.btn-logout {
 			/*     border: 1px solid red; */
 			border: none;
@@ -286,39 +291,48 @@
 			margin: 0;
 			padding: 0;
 		}
-
+	
 		.input-group-addon {
 			background: white;
 		}
-
+	
 		.form-control {
 			height: 35px;
 		}
-
+	
 		.dinheiro form-control {
 			width: 80%;
 		}
-		.avatar{
+	
+		.avatar {
 			border-radius: 20px 20px 20px 20px;
 			width: 70px;
 			height: 70px;
 		}
-		.avatarEdit{
+	
+		.avatarEdit {
 			border-radius: 10px;
 			border: 1px solid gray;
 		}
+		.avatarPerfil {
+			border-radius: 10px;
+			border: 1px solid #0e081b;
+			width: 400px;
+			/* height: 300px; */
+		}
+	
 		.readonly {
 			background-color: #f8f8ff;
 			border: #f8f8ff;
 			font-weight: bold;
 		}
-		 a {
+	
+		a {
 			font-weight: bold;
 			text-decoration: none;
 			font-size: 11pt;
 			color: #000000;
 		}
-		
 
 		/*End CSS*/
 	</style>
@@ -340,7 +354,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.php"><img src="images/ssj-dev-2.png" width="120px" alt="logo"></a>
+				<a class="navbar-brand" href="index.php"><img src="images/ssj-dev-2.png" width="118px" alt="logo"></a>
 			</div>
 			<!-- Top Menu Items -->
 			<ul class="nav navbar-right top-nav">
@@ -372,7 +386,7 @@
 				
 
                 <li>
-                    <a href="form-cad-func.php"><i class="fa fa-fw fa-user-plus"></i> Cadastrar </a>
+                    <a href="form-cad-func.php"><i class="fa fa-fw fa-user-plus"></i> Cadastrar</a>
 
 				</li>
 				<li>

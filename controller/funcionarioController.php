@@ -12,6 +12,12 @@ require_once ("resize-class.php");
  
  class FuncionarioController {
     
+    public static function buscar($id){
+        $dao = Dao::find($id);
+        $f = $dao;
+
+        return $f;     
+    }
     /**
      *  Listar Funcionario
      */
@@ -24,7 +30,7 @@ require_once ("resize-class.php");
         foreach ($funcionario as $f){
         //Monta a Tabela
         echo "<td>".$f['id']."</td>";
-        echo "<td>"."<a href="."repositorio/".$f['url_img'].">".
+        echo "<td>"."<a href="."form-id.php?id=".$f['id'].">".
                     "<img class='avatar' src='./repositorio/"
                        .$f['url_img']."'>"."</td>";
             echo "<td>".$f['nome']."</td>";
@@ -47,8 +53,10 @@ require_once ("resize-class.php");
             echo "<td><a href='confirm-del.php?id=".$f['id']."&&nome=".$f['nome']."'>
             <i style='font-size:24px; color: red;' class='glyphicon'>&#xe020;</i>
             </a></td><tr>";
+            
+            }
+           
         } 
-    }
     /**
      *  Criar Funcionario
      */
@@ -168,5 +176,7 @@ require_once ("resize-class.php");
         $dao->addTelefone($id, $telefone1);
 
     }
+   
  }
- 
+ //$f = FuncionarioController::buscar(3);
+ ?>

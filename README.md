@@ -3,7 +3,7 @@
 
     
 
-<h2>Tecnologias: Html, Css, Js, PHP, Mysql/PostgrSQL</h2>
+<h2>Tecnologias: Html, Css, Js, PHP, Mysql</h2>
 
 <h2>Proposta:</h2>
 <h3>Sistema de Cadastro de funcionários</h3>

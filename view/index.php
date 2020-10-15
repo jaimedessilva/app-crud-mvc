@@ -56,7 +56,7 @@
                     <!-- Head -->
                     <thead>
                          <tr>
-                              <th>ID</th>
+                              <th>#</th>
                               <th>Thumb</th>
                               <th >Nome</th>
                               <th >Email</th>

@@ -17,20 +17,55 @@ include '../db/pdo.php';
      */
     public static $funcionario ="tb_funcionario";
     public static $telefones ="tb_telefones";
+    
     /**
      *  Listar Funcionarios
      */
     public static function list (){
         //List
         $db = Conexao::connect();
-        $query = "SELECT id,url_img,nome,email,telefone,b.numero  FROM ". self::$funcionario." a 
-        LEFT JOIN " . self::$telefones." b on a.id = b.id_funcionario GROUP BY id order by id LIMIT 50";
+        $query = "SELECT id,
+                        url_img,
+                        nome,
+                        email,
+                        telefone,
+                        b.numero  
+                        FROM ". self::$funcionario." a 
+                        LEFT JOIN " . self::$telefones.
+                        " b on a.id = b.id_funcionario 
+                        GROUP BY id 
+                        order by id LIMIT 50";
     
         $rs = $db->query($query);   
         while($f = $rs->fetch_array(MYSQLI_ASSOC)){
             $list[] = $f;
         }
         return $list;
+    }
+    /**
+     *  Get By Id
+     */
+    public static function find ($id){
+        
+        $pdo = Conexao::pdo();
+        $query = "SELECT 
+                    id,
+                    url_img,
+                    nome,
+                    email,
+                    telefone,
+                    b.numero
+                    FROM ". self::$funcionario.
+                    " a LEFT JOIN ". self::$telefones.
+                    " b ON a.id = b.id_funcionario
+                    WHERE id = ?";
+        
+        $st = $pdo->prepare($query);
+        $st->bindValue(1,$id);
+        $st->execute(); 
+        $array = $st->fetch(PDO::FETCH_ASSOC);
+    
+        return $array;   
     }
     /**
      *  Cadastrar Funcionários
@@ -135,6 +170,7 @@ include '../db/pdo.php';
              $query = "INSERT INTO ". self::$telefones."
              (id_funcionario,numero) 
              VALUES (?,?)";
+             
              $st = $pdo->prepare($query);
              $st->bindValue(1,$id);
              $st->bindValue(2,$telefone); 
@@ -154,6 +190,7 @@ include '../db/pdo.php';
         //Remover
         $pdo = Conexao::pdo();
         $query = "DELETE FROM ". self::$funcionario." WHERE id = ?";
+        
         $st = $pdo->prepare($query);
         $st->bindValue(1,$id);
         if ($st->execute ()){
@@ -164,7 +201,8 @@ include '../db/pdo.php';
             Conexao::close(); 
       }
  }//End Class
- //$dao = Dao::list();
+ //var_dump ($dao = Dao::find(3));
+ 
 
 ?>
 
